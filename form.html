@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Contract Agreement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="contract-container">
+        <h1>INTERNSHIP CONTRACT AGREEMENT</h1>
+        
+        <h2>PARTIES</h2>
+        <p>This Internship Agreement (hereinafter referred to as the “<b>Agreement</b>”) is entered into on</p>
+        <input type="text" placeholder="Effective Date" class="input-text">, by and between
+        <input type="text" placeholder="Company Name" class="input-text">,
+        with an address of <input type="text" placeholder="Company Address" class="input-text">, (hereinafter referred to as the “<b>Company</b>”) and
+        <input type="text" placeholder="Intern Name" class="input-text">,
+        with an address of <input type="text" placeholder="Intern Address" class="input-text">, (hereinafter referred to as the “<b>Intern</b>”) (collectively referred to as the “<b>Parties</b>”).
+
+        <h2>INTERNSHIP POSITION</h2>
+        <p>The Intern has been assigned to the position of 
+        <input type="text" placeholder="Position" class="input-text"> in the 
+        <input type="text" placeholder="Department" class="input-text"> department.</p>
+
+        <h2>DUTIES AND RESPONSIBILITIES</h2>
+        <p>During the internship period, the Intern shall have the responsibility of performing the following duties:</p>
+        <ol>
+            <li><input type="text" class="input-text"></li>
+            <li><input type="text" class="input-text"></li>
+            <li><input type="text" class="input-text"></li>
+            <li><input type="text" class="input-text"></li>
+            <li><input type="text" class="input-text"></li>
+        </ol>
+
+        <h2>PAY AND COMPENSATION</h2>
+        <p>The Parties hereby agree that this internship is unpaid and that the Intern will not be compensated or paid for any services that he/she conducts at the Company.</p>
+        <p>The Intern agrees that he/she will be compensated in knowledge, education and experience as consideration for the duties and responsibilities that he/she will undertake under this Agreement.</p>
+
+        <h2>WORKING HOURS</h2>
+        <p>The Intern agrees that he/she will be working from 
+        <input type="text" placeholder="Start Time" class="input-text"> to 
+        <input type="text" placeholder="End Time" class="input-text"> (Monday to Friday), with 
+        <input type="text" placeholder="Lunch Break Duration" class="input-text"> lunch break.</p>
+
+        <h2>Signature</h2>
+        <p>Please sign below:</p>
+        <canvas id="signatureCanvas" width="500" height="200"></canvas>
+        <div class="buttons">
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="saveSignature()">Save</button>
+        </div>
+
+        <h2>Submit</h2>
+        <button onclick="submitForm()">Submit Form</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

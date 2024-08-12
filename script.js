@@ -1,56 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signature Canvas</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        canvas {
-            border: 2px solid #000;
-            background-color: #fff;
-        }
-        .buttons {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        button {
-            padding: 8px 16px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <div>
-        <canvas id="signatureCanvas" width="500" height="200"></canvas>
-        <div class="buttons">
-            <button onclick="clearCanvas()">Clear</button>
-            <button onclick="saveSignature()">Save</button>
-        </div>
-    </div>
-
-    <script>
-        const canvas = document.getElementById('signatureCanvas');
+const canvas = document.getElementById('signatureCanvas');
 const ctx = canvas.getContext('2d');
 let isDrawing = false;
 
-// Mouse events
+// Handle mouse events
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', stopDrawing);
 canvas.addEventListener('mousemove', draw);
 
-// Touch events
+// Handle touch events for mobile devices
 canvas.addEventListener('touchstart', startDrawing);
 canvas.addEventListener('touchend', stopDrawing);
 canvas.addEventListener('touchmove', draw);
@@ -72,7 +29,7 @@ function getTouchPos(e) {
 }
 
 function startDrawing(e) {
-    e.preventDefault(); // Prevent scrolling when touching the canvas
+    e.preventDefault();
     isDrawing = true;
     ctx.beginPath();
     const pos = e.type.includes('touch') ? getTouchPos(e) : getMousePos(e);
@@ -86,7 +43,7 @@ function stopDrawing() {
 
 function draw(e) {
     if (!isDrawing) return;
-    e.preventDefault(); // Prevent scrolling when touching the canvas
+    e.preventDefault();
     const pos = e.type.includes('touch') ? getTouchPos(e) : getMousePos(e);
     ctx.lineTo(pos.x, pos.y);
     ctx.stroke();
@@ -104,7 +61,7 @@ function saveSignature() {
     link.click();
 }
 
-    </script>
-
-</body>
-</html>
+function submitForm() {
+    alert('Form submitted!');
+    // Add your form submission logic here
+}
