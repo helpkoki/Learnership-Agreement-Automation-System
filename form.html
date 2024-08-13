@@ -13,11 +13,11 @@
         
         <h2>PARTIES</h2>
         <p>This Internship Agreement (hereinafter referred to as the “<b>Agreement</b>”) is entered into on</p>
-        <input type="text" placeholder="Effective Date" class="input-text">, by and between
-        <input type="text" placeholder="Company Name" class="input-text">,
-        with an address of <input type="text" placeholder="Company Address" class="input-text">, (hereinafter referred to as the “<b>Company</b>”) and
+        <input type="text" placeholder="Effective Date" class="input-text"> by and between
+        <input type="text" placeholder="Company Name" class="input-text">
+        with an address of <input type="text" placeholder="Company Address" class="input-text"> (hereinafter referred to as the “<b>Company</b>”) and
         <input type="text" placeholder="Intern Name" class="input-text">,
-        with an address of <input type="text" placeholder="Intern Address" class="input-text">, (hereinafter referred to as the “<b>Intern</b>”) (collectively referred to as the “<b>Parties</b>”).
+        with an address of <input type="text" placeholder="Intern Address" class="input-text"> (hereinafter referred to as the “<b>Intern</b>”) (collectively referred to as the “<b>Parties</b>”).
 
         <h2>INTERNSHIP POSITION</h2>
         <p>The Intern has been assigned to the position of 
@@ -45,7 +45,15 @@
         <input type="text" placeholder="Lunch Break Duration" class="input-text"> lunch break.</p>
 
         <h2>Signature</h2>
-        <p>Please sign below:</p>
+        <p>Please sign below:(Intern)</p>
+        <canvas id="signatureCanvas" width="500" height="200"></canvas>
+        <div class="buttons">
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="saveSignature()">Save</button>
+        </div>
+
+        <h2>Signature</h2>
+        <p>Please sign below:(HR)</p>
         <canvas id="signatureCanvas" width="500" height="200"></canvas>
         <div class="buttons">
             <button onclick="clearCanvas()">Clear</button>
